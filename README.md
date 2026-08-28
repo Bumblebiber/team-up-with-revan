@@ -30,7 +30,7 @@ It reviews. It does not fix, patch, or rewrite the spec it reviews against.
 git clone https://github.com/Bumblebiber/team-up-with-revan
 team-up specialist inspect ./team-up-with-revan     # read-only, always first
 team-up specialist install ./team-up-with-revan
-team-up specialist approve review.revan@0.1.0 --project /abs/path/to/project
+team-up specialist approve review.revan@0.1.1 --project /abs/path/to/project
 ```
 
 Approval binds the project, id, version, checksum and permissions together;

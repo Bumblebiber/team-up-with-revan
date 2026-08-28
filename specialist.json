@@ -2,7 +2,7 @@
   "schema_version": 2,
   "id": "review.revan",
   "display_name": "Revan",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "remit": [
     "two-axis review of a diff — repository standards and originating spec",
     "defect finding on merged changes",
