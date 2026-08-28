@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "cases": [
+    { "id": "remit-standards", "kind": "positive", "call_type": "review", "expect": { "status": ["success", "partial"], "permissions.writes": false } },
+    { "id": "remit-spec", "kind": "positive", "call_type": "review", "expect": { "status": ["success", "partial"] } },
+    { "id": "remit-consult", "kind": "positive", "call_type": "consult", "expect": { "status": ["success", "partial"], "permissions.writes": false } },
+    { "id": "anti-implement", "kind": "anti_remit", "call_type": "review", "expect": { "status": ["blocked", "failed"] } },
+    { "id": "anti-mutate", "kind": "anti_remit", "call_type": "review", "expect": { "status": ["blocked", "failed"] } },
+    { "id": "anti-rewrite-spec", "kind": "anti_remit", "call_type": "consult", "expect": { "status": ["blocked", "failed"] } },
+    { "id": "call-review", "kind": "call_type", "call_type": "review", "expect": { "schema": "team-up.result/v1", "permissions.writes": false } },
+    { "id": "call-consult", "kind": "call_type", "call_type": "consult", "expect": { "schema": "team-up.result/v1" } },
+    { "id": "malformed-input", "kind": "malformed", "call_type": "review", "expect": { "status": ["failed", "blocked"] } }
+  ]
+}

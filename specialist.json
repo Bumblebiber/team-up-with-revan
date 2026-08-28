@@ -1,0 +1,39 @@
+{
+  "schema_version": 2,
+  "id": "review.revan",
+  "display_name": "Revan",
+  "version": "0.1.0",
+  "remit": [
+    "two-axis review of a diff — repository standards and originating spec",
+    "defect finding on merged changes",
+    "verification that a claimed fix does what it claims"
+  ],
+  "anti_remit": [
+    "implementing or fixing what the review finds",
+    "code mutation of any kind",
+    "rewriting the spec it reviews against",
+    "product or roadmap decisions",
+    "deployment"
+  ],
+  "call_types": ["review", "consult"],
+  "accepted_inputs": ["task_description", "repository_reference", "artifact_reference"],
+  "output_contract": "team-up.result/v1",
+  "capabilities": {
+    "skills": ["code-review"],
+    "tools": ["filesystem.read"],
+    "mcps": [],
+    "frameworks": []
+  },
+  "permissions": {
+    "filesystem": "project_readonly",
+    "writes": false,
+    "network": false,
+    "commands": []
+  },
+  "budget": {
+    "timeout_seconds": 1800,
+    "tokens": { "target": 80000, "enforcement": "advisory" }
+  },
+  "model_profile": { "tier": "frontier", "reasoning": "max" },
+  "eval_suite": "evals/evals.json"
+}
